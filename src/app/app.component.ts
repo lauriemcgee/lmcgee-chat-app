@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ChatsComponent } from './chats-component';
+import { ChatsComponent } from './chats/chats.component';
+
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,4 @@ import { ChatsComponent } from './chats-component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
 }
