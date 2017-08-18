@@ -1,4 +1,6 @@
-<div *ngFor="let chat of chats">
-  <p>{{ chat.userName }}, says:</p>
-  <p>{{ chat.message }}</p>
+<div *ngFor="let chat of chats" class="eachChat">
+  <div class="card">
+    <span>{{ chat.name }}, says: </span>
+    <span>{{ chat.sizeInfo }}</span>
+  </div>
 </div>

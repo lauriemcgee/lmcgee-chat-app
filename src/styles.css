@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+.chatsContainer {
+  height: 450px;
+  width: 60%;
+  margin: 0 auto;
+  overflow: scroll;
+}
+
+.inputContainer {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  padding: 5%;
+}
+
+.eachChat {
+  margin: 10%;
+}
+
+.inputChat {
+  width: 80%;
+}
