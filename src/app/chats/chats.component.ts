@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
+import { WebService } from '../web.service';
+
 
 @Component({
   selector: 'app-chats',
   templateUrl: './chats.component.html'
 })
 export class ChatsComponent {
-  chats = [
-    { message: 'Hey you kids', userName: 'user123456'},
-    { message: 'Get off my lawn', userName: 'user654321'},
-    { message: 'Hope this works', userName: 'user123978'}
-  ];
+  chats = [];
+  constructor(private webService: WebService) {}
+
+// called once constructor initializes
+  async ngOnInit() {
+    let response = await this.webService.getChats();
+    console.log(response);
+    // this.chats = response.json();
+  }
  }
