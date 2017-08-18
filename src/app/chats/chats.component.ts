@@ -8,12 +8,11 @@ import { WebService } from '../web.service';
 })
 export class ChatsComponent {
   chats = [];
-  constructor(private webService: WebService) {}
+  constructor (private webService: WebService) {}
 
 // called once constructor initializes
   async ngOnInit() {
     let response = await this.webService.getChats();
-    console.log(response);
-    // this.chats = response.json();
+    this.chats = response.json();
   }
  }
