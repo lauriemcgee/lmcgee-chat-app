@@ -1,4 +1,4 @@
 <div>
-  <input class="inputChat" type="text" name="newChat" ng-model="chats.new" placeholder="New Chat">
-  <button type="submit" value="submit">Submit</button>
+  <input class="inputChat" type="text" [(ngModel)]="newChatText.text" placeholder="Write something, {{ newChatText.currentUser }}">
+  <button type="submit" value="submit" (click)="post()">Submit</button>
 </div>

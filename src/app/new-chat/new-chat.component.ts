@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WebService } from '../web.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-new-chats',
@@ -7,7 +8,15 @@ import { WebService } from '../web.service';
   styleUrls: ['./new-chat.component.css']
 })
 export class NewChatComponent {
+  constructor(private webService: WebService) { }
 
-  constructor(private webService : WebService) { }
+  newChatText = {
+    currentUser: 'Laurie',
+    text: '',
+  };
+
+  post() {
+    console.log(this.newChatText.text);
+  }
 
 }
