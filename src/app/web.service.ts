@@ -19,9 +19,10 @@ export class WebService {
     }
   }
 
-  postChat(newChatText) {
+  async postChat(newChatText) {
     try {
-      return this.http.post(this.BASE_URL, newChatText).toPromise();
+      const response = await this.http.post(this.BASE_URL, newChatText).toPromise();
+      this.chats.push(response.json());
     } catch (error) {
       this.handleError('Unable to post your chat!');
     }
