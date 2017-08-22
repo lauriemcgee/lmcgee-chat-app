@@ -4,15 +4,9 @@ import { WebService } from '../web.service';
 
 @Component({
   selector: 'app-chats',
-  templateUrl: './chats.component.html'
+  templateUrl: './chats.component.html',
+  providers: [ WebService ]
 })
 export class ChatsComponent {
-  chats = [];
-  constructor (private webService: WebService) {}
-
-// called once constructor initializes
-  async ngOnInit() {
-    let response = await this.webService.getChats();
-    this.chats = response.json();
-  }
+  constructor(public webService: WebService) {}
  }

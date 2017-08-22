@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { WebService } from '../web.service';
 import { FormsModule } from '@angular/forms';
 
@@ -8,15 +8,18 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./new-chat.component.css']
 })
 export class NewChatComponent {
+
+  @Output() onPosted = new EventEmitter();
   constructor(private webService: WebService) { }
 
   newChatText = {
-    currentUser: 'Laurie',
-    text: '',
+    name: 'Laurie',
+    sizeInfo: '',
   };
 
   post() {
-    console.log(this.newChatText.text);
+    this.webService.postChat(this.newChatText);
+    this.onPosted.emit(this.newChatText);
   }
 
 }

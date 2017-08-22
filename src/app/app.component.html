@@ -3,5 +3,5 @@
     <app-chats></app-chats>
   </div>
   <div class=inputContainer>
-    <app-new-chats></app-new-chats>
+    <app-new-chats (onPosted)="onPosted($event)"></app-new-chats>
   </div>
