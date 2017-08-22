@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ChatsComponent } from './chats/chats.component';
 import { WebService } from './web.service';
 import { NewChatComponent } from './new-chat/new-chat.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatsComponent,
-    NewChatComponent
+    NewChatComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule, HttpModule, FormsModule
