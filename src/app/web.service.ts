@@ -15,11 +15,19 @@ export class WebService {
       const response = await this.http.get(this.BASE_URL).toPromise();
       this.chats = response.json();
     } catch (error) {
-      console.log('Could not get chats!');
+      this.handleError('Unable to find your chats!');
     }
   }
 
   postChat(newChatText) {
-    return this.http.post(this.BASE_URL, newChatText).toPromise();
+    try {
+      return this.http.post(this.BASE_URL, newChatText).toPromise();
+    } catch (error) {
+      this.handleError('Unable to post your chat!');
+    }
+  }
+
+  private handleError(error) {
+    console.log(error);
   }
 }
