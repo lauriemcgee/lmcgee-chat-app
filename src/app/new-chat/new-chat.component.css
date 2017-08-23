@@ -1,0 +1,28 @@
+.inputContainer {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  padding: 3%;
+}
+
+input {
+  border: 1px solid #F96332;
+  border-radius: 40px;
+  width: 75%;
+  height: 3em;
+  text-indent: 1em;
+}
+
+.button {
+  border: none;
+  margin: 2%;
+  height: 3em;
+  width: 15%;
+  border-radius: 40px;
+  color: #FFFFFF;
+  background: #F96332;
+  -webkit-box-shadow: -2px 9px 29px 0px rgba(0,0,0,0.19);
+  -moz-box-shadow: -2px 9px 29px 0px rgba(0,0,0,0.19);
+  box-shadow: -2px 9px 29px 0px rgba(0,0,0,0.19);
+}
+

@@ -1,6 +1,14 @@
-<div *ngFor="let chat of webService.chats" class="eachChat">
-  <div class="card">
-    <span>{{ chat.name }}, says: </span>
-    <span>{{ chat.sizeInfo }}</span>
+<div class="userBar">
+  <p class="date">April 3, 2017</p>
+</div>
+<!-- <div class="loading">
+  <p>Loading...</p>
+</div> -->
+<div class="chatsContainer">
+  <div *ngFor="let chat of webService.chats" class="eachChat">
+    <div class="card">
+      <span>{{ chat.name }}, says: </span>
+      <span>{{ chat.sizeInfo }}</span>
+    </div>
   </div>
 </div>

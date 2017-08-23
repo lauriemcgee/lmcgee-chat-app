@@ -1,4 +1,4 @@
-<div>
-  <input class="inputChat" type="text" [(ngModel)]="newChatText.sizeInfo" placeholder="Write something, {{ newChatText.currentUser }}">
-  <button type="submit" value="submit" (click)="post()">Submit</button>
+<div class="inputContainer">
+  <input type="text" [(ngModel)]="newChatText.sizeInfo" placeholder="Write something, {{ newChatText.name }}...">
+  <button class="button" type="submit" (click)="post()"> &#8594;  Submit</button>
 </div>

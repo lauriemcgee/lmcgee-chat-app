@@ -1,0 +1,31 @@
+.userBar {
+  background: #ea5d2e;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.userBar > .date {
+  margin-left: 12%;
+  padding-bottom: 1%;
+  color: #FFFFFF;;
+}
+
+.eachChat {
+  margin: 10%;
+}
+
+.chatsContainer {
+  margin: 3% auto;
+  height: 48%;
+  width: 70%;
+  overflow: scroll;
+}
+
+.loading {
+  padding: 2%;
+  text-align:center;
+  opacity: 0.5;
+  color: #1D1D26;
+}
