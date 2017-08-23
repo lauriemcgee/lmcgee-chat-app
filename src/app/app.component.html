@@ -1,9 +1,4 @@
 <app-nav></app-nav>
+<app-chats></app-chats>
+<app-new-chats (onPosted)="onPosted($event)"></app-new-chats>
 
-<div class="chatsContainer">
-  <app-chats></app-chats>
-</div>
-
-<div class=inputContainer>
-  <app-new-chats (onPosted)="onPosted($event)"></app-new-chats>
-</div>
